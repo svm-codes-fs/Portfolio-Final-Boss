@@ -91,14 +91,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
   return (
     <section
       id="contact"
-      className="relative w-full py-24 sm:py-32 lg:py-44 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F] overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F] overflow-hidden"
     >
       {/* Film Ending Lighting / Subtle Accent glow in background */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#C8FF00]/[0.025] rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Label */}
-        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-12 sm:mb-16">
+        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-8 sm:mb-10">
           <span className="text-[#C8FF00] font-bold">09</span>
           <span className="text-[#2A2A2A]">/</span>
           <span className="text-[#F5F5F0]">INITIATE COLLABORATION</span>
@@ -106,7 +106,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
         </div>
 
         {/* Main Dramatic Headline */}
-        <div className="mb-12 sm:mb-16 max-w-full overflow-hidden">
+        <div className="mb-8 sm:mb-10 max-w-full overflow-hidden">
           <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-black text-[#ECE7DE] tracking-tight leading-[0.95] uppercase select-none break-words">
             <span className="block">LET'S</span>
             <span className="block text-outline-white ml-2 sm:ml-6 lg:ml-10">BUILD</span>
@@ -117,9 +117,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
         </div>
 
         {/* Two-Column Supporting Narrative & Magnetic CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end border-b border-[#1F1F1F] pb-16 sm:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end border-b border-[#1F1F1F] pb-8 sm:pb-12">
           {/* Left Narrative */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-4 sm:space-y-6">
             <p className="font-display text-lg sm:text-2xl md:text-3xl text-[#F5F5F0] font-medium leading-snug">
               Have an interesting project, internship opportunity, or technical problem worth solving?
             </p>
@@ -151,15 +151,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
           </div>
 
           {/* Right: Large Magnetic CTA */}
-          <div className="lg:col-span-6 flex flex-col items-start lg:items-end gap-6">
+          <div className="lg:col-span-6 flex flex-col items-start lg:items-end gap-5">
             <button
               onClick={() => setShowFormModal(true)}
               data-cursor="cta"
-              className="group relative w-full sm:w-auto px-8 sm:px-12 py-6 sm:py-8 rounded-2xl bg-[#C8FF00] text-[#090909] font-headline font-extrabold text-xl sm:text-2xl uppercase tracking-wider flex items-center justify-between sm:justify-center gap-6 shadow-[0_10px_40px_rgba(200,255,0,0.18)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+              className="group relative w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-6 rounded-2xl bg-[#C8FF00] text-[#090909] font-headline font-extrabold text-lg sm:text-xl uppercase tracking-wider flex items-center justify-between sm:justify-center gap-5 shadow-[0_10px_40px_rgba(200,255,0,0.18)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
             >
               <span>START A CONVERSATION</span>
-              <div className="w-10 h-10 rounded-full bg-[#090909] text-[#C8FF00] flex items-center justify-center transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
-                <ArrowUpRight className="w-5 h-5" />
+              <div className="w-9 h-9 rounded-full bg-[#090909] text-[#C8FF00] flex items-center justify-center transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                <ArrowUpRight className="w-4 h-4" />
               </div>
             </button>
 

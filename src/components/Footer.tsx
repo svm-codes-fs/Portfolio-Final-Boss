@@ -28,8 +28,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full py-16 px-6 sm:px-8 lg:px-16 bg-[#060606] border-t border-[#191919] font-mono-code text-xs text-[#A0A0A0]">
-      <div className="max-w-6xl mx-auto flex flex-col gap-12">
+    <footer className="w-full py-10 sm:py-12 px-4 sm:px-8 lg:px-16 bg-[#060606] border-t border-[#191919] font-mono-code text-xs text-[#A0A0A0]">
+      <div className="max-w-6xl mx-auto flex flex-col gap-8">
         {/* Top Tier */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>

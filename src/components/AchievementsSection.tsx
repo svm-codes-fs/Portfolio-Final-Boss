@@ -17,29 +17,29 @@ export const AchievementsSection: React.FC = () => {
   return (
     <section
       id="achievements"
-      className="relative w-full py-24 sm:py-32 px-4 sm:px-8 lg:px-14 bg-[#0a0c10] border-t border-white/10"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-14 bg-[#0a0c10] border-t border-white/10"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-12 sm:mb-16">
+        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-8 sm:mb-10">
           <span className="text-[#C8FF00] font-bold">05</span>
           <span className="text-white/20">/</span>
           <span className="text-[#ECE7DE]">HONORS & CREDENTIALS</span>
           <div className="h-px flex-1 bg-white/10 ml-4" />
         </div>
 
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-8 sm:mb-10">
           <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#ECE7DE] tracking-tight uppercase break-words">
             ACHIEVEMENTS
           </h2>
         </div>
 
         {/* Clean, Non-Overlapping Structured Achievement Cards */}
-        <div className="space-y-8 sm:space-y-10">
+        <div className="space-y-6">
           {ACHIEVEMENTS.map((ach, idx) => (
             <div
               key={ach.number}
-              className="relative rounded-2xl sm:rounded-3xl bg-[#141720]/80 border border-white/10 p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:border-white/25 hover:bg-[#161a24] shadow-xl group"
+              className="relative rounded-2xl sm:rounded-3xl bg-[#141720]/80 border border-white/10 p-5 sm:p-7 lg:p-8 transition-all duration-300 hover:border-white/25 hover:bg-[#161a24] shadow-xl group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
                 {/* Left Badge / Rank Header */}

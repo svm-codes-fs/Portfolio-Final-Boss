@@ -6,11 +6,11 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative w-full py-24 sm:py-28 lg:py-36 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Index Marker */}
-        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-12 sm:mb-16">
+        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-8 sm:mb-10">
           <span className="text-[#C8FF00] font-bold">02</span>
           <span className="text-[#2A2A2A]">/</span>
           <span className="text-[#F5F5F0]">ABOUT & PHILOSOPHY</span>
@@ -18,14 +18,14 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Huge Editorial Statement */}
-        <div className="mb-12 sm:mb-20">
+        <div className="mb-8 sm:mb-12">
           <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F5F5F0] leading-snug uppercase break-words">
             {PERSONAL_INFO.statement}
           </h2>
         </div>
 
         {/* Two-Column Editorial Narrative & Technical Profile */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Main Narrative Paragraphs */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-[#A0A0A0] text-base sm:text-lg leading-relaxed">
             <p className="text-[#F5F5F0] font-normal">

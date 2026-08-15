@@ -30,12 +30,12 @@ export const SelectedWork: React.FC = () => {
     <section
       ref={containerRef}
       id="work"
-      className="relative w-full py-28 lg:py-36 px-4 sm:px-8 lg:px-14 bg-[#0a0c10] border-t border-white/10 overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-14 bg-[#0a0c10] border-t border-white/10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto overflow-hidden">
         {/* Section Header Matching Video / Screenshot */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20 flex flex-col items-center px-2">
-          <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#ECE7DE] tracking-tight uppercase mb-3 sm:mb-6 select-none break-words">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 flex flex-col items-center px-2">
+          <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#ECE7DE] tracking-tight uppercase mb-2 sm:mb-4 select-none break-words">
             MY PROJECTS
           </h2>
           <p className="font-mono-code text-xs sm:text-sm text-[#9CA3AF] uppercase tracking-[0.2em] leading-relaxed max-w-2xl text-center">
@@ -44,7 +44,7 @@ export const SelectedWork: React.FC = () => {
         </div>
 
         {/* Project Cards with Alternating Layouts */}
-        <div className="space-y-12 sm:space-y-20">
+        <div className="space-y-8 sm:space-y-12">
           {PROJECTS.map((project, idx) => {
             const isImageLeft = idx % 2 === 1; // Card 2 has image on left, text on right!
 
@@ -83,10 +83,10 @@ export const SelectedWork: React.FC = () => {
                 </div>
 
                 {/* Main Dark Slate Card Container */}
-                <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[36px] bg-[#161922] border border-white/[0.08] p-5 sm:p-8 lg:p-12 shadow-2xl transition-all duration-500 hover:border-white/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] overflow-hidden">
+                <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[32px] bg-[#161922] border border-white/[0.08] p-5 sm:p-7 lg:p-9 shadow-2xl transition-all duration-500 hover:border-white/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] overflow-hidden">
                   {/* Grid Container */}
                   <div
-                    className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
+                    className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center ${
                       isImageLeft ? 'lg:grid-flow-dense' : ''
                     }`}
                   >

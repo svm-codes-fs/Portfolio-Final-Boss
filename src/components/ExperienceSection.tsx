@@ -6,29 +6,29 @@ export const ExperienceSection: React.FC = () => {
   return (
     <section
       id="experience"
-      className="relative w-full py-24 sm:py-28 lg:py-36 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-12 sm:mb-16">
+        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-8 sm:mb-10">
           <span className="text-[#C8FF00] font-bold">04</span>
           <span className="text-[#2A2A2A]">/</span>
           <span className="text-[#F5F5F0]">INDUSTRY ENGINEERING EXPERIENCE</span>
           <div className="h-[1px] flex-1 bg-[#1F1F1F] ml-4" />
         </div>
 
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-8 sm:mb-10">
           <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#F5F5F0] tracking-tight uppercase break-words">
             EXPERIENCE
           </h2>
         </div>
 
         {/* Editorial Timeline Rows */}
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-10">
           {EXPERIENCES.map((exp, idx) => (
             <div
               key={idx}
-              className="border-t border-[#1F1F1F] pt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12"
+              className="border-t border-[#1F1F1F] pt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8"
             >
               {/* Left Year & Duration Monospace */}
               <div className="lg:col-span-3 font-mono-code">

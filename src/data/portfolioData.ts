@@ -12,6 +12,8 @@ export const PERSONAL_INFO = {
   status: 'AVAILABLE FOR INTERNSHIPS & ROLES',
   batch: '2028',
   academicInstitution: 'Thapar Institute of Engineering & Technology',
+  resumeUrl: 'https://drive.google.com/file/d/13D3FJHl-MbS56gtjGVA2dSlLRhB181kB/view?usp=sharing',
+  resumeDownloadUrl: 'https://drive.google.com/uc?export=download&id=13D3FJHl-MbS56gtjGVA2dSlLRhB181kB',
   statement: 'I LIKE TURNING MESSY PROBLEMS INTO SOFTWARE THAT ACTUALLY WORKS.',
   bio: "I'm Shivam Raj, a Computer Engineering undergraduate at Thapar Institute of Engineering and Technology (Batch of 2028). I specialize in building practical, high-performance software across Android, full-stack web applications, backend APIs, and explainable machine learning systems. Driven by strong fundamentals in Data Structures & Algorithms, Object-Oriented Design, and clean system architecture.",
 };
@@ -142,16 +144,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     year: '2026',
     description: 'Certified by Oracle University in foundational Agentic AI concepts, autonomous tool calling, multi-agent coordination, and predictive model integration.',
     tags: ['Oracle', 'Agentic AI', 'Certification', 'AI Systems']
-  },
-  {
-    number: '03',
-    place: 'SELECTED',
-    title: 'B.E. COMPUTER ENGINEERING ADMISSION',
-    context: 'THAPAR INSTITUTE OF ENGINEERING AND TECHNOLOGY',
-    subcontext: 'PREMIER ENGINEERING INSTITUTION',
-    year: '2025',
-    description: 'Selected for B.E. (Computer Engineering) at Thapar Institute of Engineering and Technology (Patiala), one of India’s top-ranked private engineering universities.',
-    tags: ['Thapar University', 'Computer Engineering', 'Undergraduate']
   }
 ];
 

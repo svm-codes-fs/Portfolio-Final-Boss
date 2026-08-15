@@ -231,14 +231,26 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               <span>{copied ? 'COPIED' : 'COPY EMAIL'}</span>
             </button>
 
-            <button
-              onClick={handleDownloadPdf}
-              disabled={isGeneratingPdf}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#C8FF00] text-[#090909] text-xs font-mono-code font-bold hover:bg-[#b8eb00] transition-colors shadow-lg disabled:opacity-50"
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#181818] border border-[#2A2A2A] text-xs font-mono-code text-[#F5F5F0] hover:border-[#C8FF00] transition-colors"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-[#C8FF00]" />
+              <span className="hidden sm:inline">VIEW ON DRIVE</span>
+            </a>
+
+            <a
+              href={PERSONAL_INFO.resumeDownloadUrl}
+              target="_blank"
+              rel="noreferrer"
+              download="Shivam_Raj_Resume.pdf"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#C8FF00] text-[#090909] text-xs font-mono-code font-bold hover:bg-[#b8eb00] transition-colors shadow-lg"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>{isGeneratingPdf ? 'DOWNLOADING...' : 'DOWNLOAD RESUME (.PDF)'}</span>
-            </button>
+              <span>DOWNLOAD RESUME (.PDF)</span>
+            </a>
 
             <button
               onClick={handlePrint}
@@ -399,6 +411,45 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                   <div className="text-[#A0A0A0]">PresentPlus Attendance Management App · 2024</div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Original Google Drive Resume Download Action Banner */}
+          <div className="pt-6 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#141414] p-5 rounded-xl border border-white/10 print:hidden">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 rounded-lg bg-[#C8FF00]/10 text-[#C8FF00]">
+                <Download className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="font-headline text-sm font-bold text-[#F5F5F0] uppercase tracking-wide">
+                  ORIGINAL VERIFIED RESUME (.PDF)
+                </div>
+                <div className="font-mono-code text-[11px] text-[#A0A0A0]">
+                  Official document hosted on Google Drive — ready to download or view.
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 w-full sm:w-auto">
+              <a
+                href={PERSONAL_INFO.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono-code text-[#F5F5F0] border border-white/10 transition-colors"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-[#C8FF00]" />
+                <span>OPEN ON DRIVE</span>
+              </a>
+              <a
+                href={PERSONAL_INFO.resumeDownloadUrl}
+                target="_blank"
+                rel="noreferrer"
+                download="Shivam_Raj_Resume.pdf"
+                className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#C8FF00] hover:bg-[#b8eb00] text-xs font-mono-code font-bold text-[#090909] shadow-lg transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>DOWNLOAD (.PDF)</span>
+              </a>
             </div>
           </div>
         </div>

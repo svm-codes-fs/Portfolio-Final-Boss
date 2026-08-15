@@ -131,7 +131,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
     <section
       ref={heroRef}
       id="hero"
-      className="relative w-full min-h-screen flex flex-col justify-between pt-24 sm:pt-28 pb-10 sm:pb-12 px-4 sm:px-8 lg:px-16 overflow-hidden bg-[#0a0c10] bg-grid-pattern selection:bg-[#C8FF00] selection:text-black"
+      className="relative w-full min-h-[90vh] sm:min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 sm:pb-8 px-4 sm:px-8 lg:px-16 overflow-hidden bg-[#0a0c10] bg-grid-pattern selection:bg-[#C8FF00] selection:text-black"
     >
       {/* Background Reticle Blueprint Diagram */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[600px] sm:h-[600px] lg:w-[720px] lg:h-[720px] opacity-10 pointer-events-none z-0">
@@ -181,7 +181,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
       {/* Top Editorial Metadata Header */}
       <div
         ref={metaTopRef}
-        className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4 font-mono-code text-[11px] sm:text-xs text-[#A0A0A0]"
+        className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-3 font-mono-code text-[11px] sm:text-xs text-[#A0A0A0]"
       >
         <div className="flex items-center gap-2 sm:gap-3">
           <span className="text-[#C8FF00] font-semibold tracking-wider">01</span>
@@ -202,7 +202,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
       </div>
 
       {/* Center Cinematic Main Typography + Floating Avatar Composition */}
-      <div className="relative z-20 my-auto pt-6 sm:pt-10 pb-6 sm:pb-8 max-w-6xl w-full mx-auto flex flex-col items-center">
+      <div className="relative z-20 my-auto pt-4 sm:pt-6 pb-4 sm:pb-6 max-w-6xl w-full mx-auto flex flex-col items-center">
         {/* Giant Monolithic Name */}
         <div className="relative w-full flex flex-col items-center select-none">
           <div className="overflow-hidden w-full text-center">
@@ -226,71 +226,39 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           {/* Centered Floating Avatar Card positioned neatly below the name so RAJ is completely visible */}
           <div
             ref={avatarWrapperRef}
-            className="mt-6 sm:mt-8 z-30 flex justify-center w-full max-w-sm"
+            className="mt-4 sm:mt-6 z-30 flex justify-center w-full max-w-sm"
           >
             <AvatarCard onOpenContact={onOpenContact} />
           </div>
         </div>
-
-        {/* Dual Flanking Contextual Statements (as in video/screenshot) */}
-        <div className="w-full mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-center text-xs sm:text-sm font-light text-[#9CA3AF]">
-          <div className="flex items-start gap-3">
-            <span className="w-2 h-2 rounded-full bg-[#C8FF00] mt-1.5 shrink-0 animate-pulse" />
-            <p className="leading-relaxed">
-              I currently study Computer Engineering at <span className="text-[#ECE7DE] font-medium">Thapar Institute</span> (Batch of 2028), currently available for high-impact software internships and developer roles.
-            </p>
-          </div>
-
-          <div className="flex items-start md:justify-end gap-3 text-left md:text-right">
-            <p className="leading-relaxed">
-              Focused on <span className="text-[#ECE7DE] font-medium">Android engineering, full-stack systems</span>, and <span className="text-[#ECE7DE] font-medium">machine learning pipelines</span>.
-            </p>
-          </div>
-        </div>
       </div>
 
-      {/* Footer Technical Metadata & Scroll Action */}
+      {/* Clean Combined Technical Footer Strip with Statements & Status */}
       <div
         ref={footerMetaRef}
-        className="relative z-10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 border-t border-white/10 pt-6 font-mono-code text-xs"
+        className="relative z-10 border-t border-white/10 pt-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-mono-code text-xs"
       >
-        {/* Coordinates & Status */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8 text-[#A0A0A0]">
-          <div>
-            <span className="text-[#A0A0A0]/60 block text-[9px] uppercase tracking-widest">
-              LOCATION
-            </span>
-            <span className="text-[#F5F5F0] uppercase tracking-wider">
-              PATIALA, INDIA
-            </span>
-          </div>
-          <div>
-            <span className="text-[#A0A0A0]/60 block text-[9px] uppercase tracking-widest">
-              GRADUATION
-            </span>
-            <span className="text-[#F5F5F0] uppercase tracking-wider">
-              BATCH OF 2028
-            </span>
-          </div>
-          <div>
-            <span className="text-[#A0A0A0]/60 block text-[9px] uppercase tracking-widest">
-              STATUS
-            </span>
-            <span className="text-[#C8FF00] uppercase tracking-wider flex items-center gap-1.5 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00] animate-pulse" />
-              AVAILABLE FOR INTERNSHIPS
-            </span>
-          </div>
+        {/* Left Focus Statement */}
+        <div className="flex items-center gap-3 text-xs text-[#9CA3AF] max-w-xl">
+          <span className="w-2 h-2 rounded-full bg-[#C8FF00] shrink-0 animate-pulse" />
+          <p className="leading-normal">
+            Computer Engineering at <span className="text-[#ECE7DE] font-medium">Thapar Institute</span> · Focused on Android, Full-Stack & ML pipelines.
+          </p>
         </div>
 
-        {/* Scroll CTA Button */}
-        <div className="flex items-center gap-4">
+        {/* Right Status & Scroll Action */}
+        <div className="flex items-center gap-4 sm:gap-6 self-end md:self-auto text-[11px] sm:text-xs">
+          <div className="flex items-center gap-1.5 text-[#C8FF00] font-medium uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00] animate-pulse" />
+            <span>AVAILABLE FOR ROLES</span>
+          </div>
+
           <button
             onClick={scrollToNext}
             data-cursor="link"
-            className="group flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-[#A0A0A0] hover:text-[#C8FF00] transition-colors py-2"
+            className="group flex items-center gap-2 uppercase tracking-widest text-[#A0A0A0] hover:text-[#C8FF00] transition-colors py-1"
           >
-            <span className="font-mono-code">SCROLL TO EXPLORE ↓</span>
+            <span>EXPLORE ↓</span>
           </button>
         </div>
       </div>
