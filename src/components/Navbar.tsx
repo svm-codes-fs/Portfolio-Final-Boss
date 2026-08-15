@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
             : 'py-6 bg-transparent border-b border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 flex items-center justify-between">
           {/* Left Brand Identity */}
           <div
             onClick={() => scrollTo('hero')}

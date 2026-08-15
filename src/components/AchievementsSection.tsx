@@ -28,8 +28,8 @@ export const AchievementsSection: React.FC = () => {
           <div className="h-px flex-1 bg-white/10 ml-4" />
         </div>
 
-        <div className="mb-14 sm:mb-16">
-          <h2 className="font-headline text-4xl sm:text-6xl font-black text-[#ECE7DE] tracking-tight uppercase">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#ECE7DE] tracking-tight uppercase break-words">
             ACHIEVEMENTS
           </h2>
         </div>

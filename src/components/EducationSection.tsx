@@ -5,19 +5,19 @@ export const EducationSection: React.FC = () => {
   return (
     <section
       id="education"
-      className="relative w-full py-28 lg:py-36 px-6 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
+      className="relative w-full py-24 sm:py-28 lg:py-36 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-16">
+        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-12 sm:mb-16">
           <span className="text-[#C8FF00] font-bold">06</span>
           <span className="text-[#2A2A2A]">/</span>
           <span className="text-[#F5F5F0]">ACADEMIC FOUNDATION</span>
           <div className="h-[1px] flex-1 bg-[#1F1F1F] ml-4" />
         </div>
 
-        <div className="mb-16">
-          <h2 className="font-headline text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#F5F5F0] tracking-tight uppercase">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#F5F5F0] tracking-tight uppercase break-words">
             EDUCATION
           </h2>
         </div>

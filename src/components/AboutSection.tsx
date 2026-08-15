@@ -6,7 +6,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative w-full py-28 lg:py-36 px-6 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
+      className="relative w-full py-24 sm:py-28 lg:py-36 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Index Marker */}
@@ -18,8 +18,8 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Huge Editorial Statement */}
-        <div className="mb-14 sm:mb-20">
-          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#F5F5F0] leading-[1.08] uppercase">
+        <div className="mb-12 sm:mb-20">
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F5F5F0] leading-snug uppercase break-words">
             {PERSONAL_INFO.statement}
           </h2>
         </div>

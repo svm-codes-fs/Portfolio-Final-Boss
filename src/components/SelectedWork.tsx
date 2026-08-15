@@ -34,8 +34,8 @@ export const SelectedWork: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto overflow-hidden">
         {/* Section Header Matching Video / Screenshot */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 flex flex-col items-center px-2">
-          <h2 className="font-headline text-4xl sm:text-6xl lg:text-7xl font-black text-[#ECE7DE] tracking-tight uppercase mb-4 sm:mb-6 select-none">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20 flex flex-col items-center px-2">
+          <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#ECE7DE] tracking-tight uppercase mb-3 sm:mb-6 select-none break-words">
             MY PROJECTS
           </h2>
           <p className="font-mono-code text-xs sm:text-sm text-[#9CA3AF] uppercase tracking-[0.2em] leading-relaxed max-w-2xl text-center">
@@ -56,12 +56,12 @@ export const SelectedWork: React.FC = () => {
               >
                 {/* Dynamic Moving Element on the Layout Border */}
                 <div
-                  className={`moving-border-bead absolute z-30 pointer-events-none ${
+                  className={`moving-border-bead absolute z-30 pointer-events-none hidden sm:block ${
                     idx === 0
                       ? 'bottom-[-16px] left-1/2 -translate-x-1/2'
                       : idx === 1
                       ? 'top-1/2 -translate-y-1/2 left-[-16px] hidden lg:block'
-                      : 'top-[-16px] right-1/4 hidden sm:block'
+                      : 'top-[-16px] right-1/4'
                   }`}
                 >
                   <div className="w-8 h-8 rounded-full bg-[#EBE7DF] shadow-[0_4px_25px_rgba(235,231,223,0.4)] border-2 border-[#161922] flex items-center justify-center animate-pulse">
@@ -71,12 +71,12 @@ export const SelectedWork: React.FC = () => {
 
                 {/* Second Floating Accent Pill on Edge */}
                 <div
-                  className={`moving-border-bead absolute z-30 pointer-events-none ${
+                  className={`moving-border-bead absolute z-30 pointer-events-none hidden sm:block ${
                     idx === 0
-                      ? 'top-[-12px] right-16 hidden sm:block'
+                      ? 'top-[-12px] right-16'
                       : idx === 1
-                      ? 'bottom-[-14px] right-1/3 hidden sm:block'
-                      : 'bottom-[-14px] left-20 hidden sm:block'
+                      ? 'bottom-[-14px] right-1/3'
+                      : 'bottom-[-14px] left-20'
                   }`}
                 >
                   <div className="w-6 h-6 rounded-full bg-[#ECE7DE]/90 shadow-lg border border-white/20" />
@@ -139,7 +139,7 @@ export const SelectedWork: React.FC = () => {
                       <h3
                         onClick={() => setActiveModalProject(project)}
                         data-cursor="project"
-                        className="font-headline text-2xl sm:text-3xl md:text-4xl font-black text-[#ECE7DE] tracking-tight uppercase cursor-pointer hover:text-[#C8FF00] transition-colors break-words"
+                        className="font-headline text-xl sm:text-3xl md:text-4xl font-black text-[#ECE7DE] tracking-tight uppercase cursor-pointer hover:text-[#C8FF00] transition-colors break-words max-w-full"
                       >
                         {project.title}
                       </h3>

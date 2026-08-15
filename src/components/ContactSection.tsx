@@ -91,14 +91,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
   return (
     <section
       id="contact"
-      className="relative w-full py-32 lg:py-44 px-6 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F] overflow-hidden"
+      className="relative w-full py-24 sm:py-32 lg:py-44 px-4 sm:px-8 lg:px-16 bg-[#090909] border-t border-[#1F1F1F] overflow-hidden"
     >
       {/* Film Ending Lighting / Subtle Accent glow in background */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#C8FF00]/[0.025] rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Label */}
-        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-16">
+        <div className="flex items-center gap-3 font-mono-code text-xs text-[#A0A0A0] uppercase tracking-widest mb-12 sm:mb-16">
           <span className="text-[#C8FF00] font-bold">09</span>
           <span className="text-[#2A2A2A]">/</span>
           <span className="text-[#F5F5F0]">INITIATE COLLABORATION</span>
@@ -107,9 +107,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
 
         {/* Main Dramatic Headline */}
         <div className="mb-12 sm:mb-16 max-w-full overflow-hidden">
-          <h2 className="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-black text-[#ECE7DE] tracking-tight leading-[0.92] uppercase select-none">
+          <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-black text-[#ECE7DE] tracking-tight leading-[0.95] uppercase select-none break-words">
             <span className="block">LET'S</span>
-            <span className="block text-outline-white ml-3 sm:ml-6 lg:ml-10">BUILD</span>
+            <span className="block text-outline-white ml-2 sm:ml-6 lg:ml-10">BUILD</span>
             <span className="block text-[#ECE7DE] hover:text-[#C8FF00] transition-colors">
               SOMETHING.
             </span>
@@ -120,7 +120,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end border-b border-[#1F1F1F] pb-16 sm:pb-24">
           {/* Left Narrative */}
           <div className="lg:col-span-6 space-y-6">
-            <p className="font-display text-xl sm:text-2xl md:text-3xl text-[#F5F5F0] font-medium leading-snug">
+            <p className="font-display text-lg sm:text-2xl md:text-3xl text-[#F5F5F0] font-medium leading-snug">
               Have an interesting project, internship opportunity, or technical problem worth solving?
             </p>
             <p className="text-sm sm:text-base text-[#A0A0A0] leading-relaxed">

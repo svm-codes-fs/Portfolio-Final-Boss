@@ -208,7 +208,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           <div className="overflow-hidden w-full text-center">
             <h1
               ref={title1Ref}
-              className="font-headline text-4xl sm:text-6xl md:text-8xl lg:text-[7.2rem] xl:text-[8.2rem] font-black tracking-tight text-[#ECE7DE] leading-[0.9] uppercase"
+              className="font-headline text-3xl sm:text-6xl md:text-8xl lg:text-[7.2rem] xl:text-[8.2rem] font-black tracking-tight text-[#ECE7DE] leading-[0.9] uppercase"
             >
               SHIVAM
             </h1>
@@ -217,7 +217,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           <div className="overflow-hidden w-full text-center mt-1 sm:mt-2">
             <h1
               ref={title2Ref}
-              className="font-headline text-4xl sm:text-6xl md:text-8xl lg:text-[7.2rem] xl:text-[8.2rem] font-black tracking-tight text-outline-white leading-[0.9] uppercase"
+              className="font-headline text-3xl sm:text-6xl md:text-8xl lg:text-[7.2rem] xl:text-[8.2rem] font-black tracking-tight text-outline-white leading-[0.9] uppercase"
             >
               RAJ
             </h1>
