@@ -12,59 +12,27 @@ export const PERSONAL_INFO = {
   status: 'AVAILABLE FOR INTERNSHIPS & ROLES',
   batch: '2028',
   academicInstitution: 'Thapar Institute of Engineering & Technology',
-  resumeUrl: 'https://drive.google.com/file/d/13D3FJHl-MbS56gtjGVA2dSlLRhB181kB/view?usp=sharing',
-  resumeDownloadUrl: 'https://drive.google.com/uc?export=download&id=13D3FJHl-MbS56gtjGVA2dSlLRhB181kB',
+  resumeUrl: 'https://drive.google.com/file/d/1i_ftdzSKTsIBeifO6ZhvsmAsl5wlhdf-/view?usp=drive_link',
+  resumeDownloadUrl: 'https://drive.google.com/uc?export=download&id=1i_ftdzSKTsIBeifO6ZhvsmAsl5wlhdf-',
   statement: 'I LIKE TURNING MESSY PROBLEMS INTO SOFTWARE THAT ACTUALLY WORKS.',
   bio: "I'm Shivam Raj, a Computer Engineering undergraduate at Thapar Institute of Engineering and Technology (Batch of 2028). I specialize in building practical, high-performance software across Android, full-stack web applications, backend APIs, and explainable machine learning systems. Driven by strong fundamentals in Data Structures & Algorithms, Object-Oriented Design, and clean system architecture.",
 };
 
 export const PROJECTS: Project[] = [
   {
-    id: 'presentplus',
-    number: '01',
-    title: 'PRESENTPLUS',
-    subtitle: 'Student Attendance Tracker Android App',
-    tagline: 'Offline-first Android attendance management system built to eliminate paper-based logs.',
-    description: 'Led a 3-person engineering team end-to-end — from system architecture to production APK delivery. Built an offline-first Android application in Java and SQLite that replaced manual paper rolls for 200+ active student records with instant CSV/Excel export, automated percentage auditing, and tamper-resistant local records.',
-    category: 'Android Engineering / Offline-First',
-    year: '2024',
-    tags: ['Android SDK', 'Java', 'XML', 'SQLite', 'Offline Local Storage'],
-    role: 'Lead Android Engineer & Architect',
-    featuredAward: '2ND PLACE — DISTRICT LEVEL HACKATHON',
-    featuredAwardYear: '2024',
-    highlights: [
-      'Engineered an offline-first SQLite database schema supporting 200+ student profiles with atomic transactions.',
-      'Designed modular UI workflows in native XML and Java Activities with custom batch-attendance toggling.',
-      'Created custom CSV and tabular export pipelines for faculty auditing without requiring internet connectivity.',
-      'Won 2nd Place at a competitive multi-college District Hackathon under stringent time and feature constraints.'
-    ],
-    architectureOverview: 'Clean Layered Architecture with Local SQLite Persistence Provider, Repository Pattern, and UI Activity View Binding.',
-    metrics: [
-      { label: 'Student Records', value: '200+' },
-      { label: 'Network Dependency', value: '0% (Offline)' },
-      { label: 'Hackathon Rank', value: '2nd Place' },
-      { label: 'Team Size', value: '3 Engineers' }
-    ],
-    githubUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
-    liveUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
-    visualType: 'presentplus'
-  },
-  {
     id: 'loanlens',
-    number: '02',
+    number: '01',
     title: 'LOANLENS',
     subtitle: 'Explainable Loan Approval Prediction System',
     tagline: 'End-to-end ML pipeline with Explainable AI (XAI) for auditable credit risk assessment.',
     description: 'Designed and built a full machine learning pipeline in Python (scikit-learn) and Flask to evaluate loan approval outcomes. Integrated an Explainable AI (XAI) layer with feature attribution scoring to provide transparent, auditable decision reasoning for non-technical credit officers and applicants.',
-    category: 'Machine Learning & Web Engineering',
+    category: 'ML & Financial Technology',
     year: '2024',
-    tags: ['Python', 'scikit-learn', 'Flask', 'REST APIs', 'Explainable AI', 'Predictive Modeling'],
+    tags: ['Python', 'scikit-learn', 'Flask', 'RESTful APIs', 'SQL'],
     role: 'ML & Backend Engineer',
     highlights: [
-      'Engineered feature preprocessing, imputing, and risk-weighting pipelines on financial datasets with high class imbalance.',
-      'Trained and evaluated ensemble classifiers achieving high precision on loan default and approval thresholds.',
-      'Implemented explainability layer generating interpretable feature attribution factors for each individual prediction.',
-      'Built a responsive multi-step Flask REST interface enabling real-time applicant risk profiling.'
+      'Built a scalable financial risk modeling pipeline using Python and scikit-learn, applying feature engineering and algorithm selection across multiple classifiers – directly applicable to credit risk assessment',
+      'Implemented an XAI layer for auditable decision reasoning and deployed an interactive web interface via Flask and RESTful APIs, making data-driven financial insights accessible to non-technical users'
     ],
     architectureOverview: 'Python Flask REST API + scikit-learn Model Pipeline with JSON Feature Vectorization & Auditable Inference Engine.',
     metrics: [
@@ -76,6 +44,34 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/svm-codes-fs/LoanLens',
     liveUrl: 'https://loan-lens-black.vercel.app/',
     visualType: 'loanlens'
+  },
+  {
+    id: 'presentplus',
+    number: '02',
+    title: 'PRESENT PLUS',
+    subtitle: 'Student Attendance Tracker Android App',
+    tagline: 'Offline-first Android attendance management system built to eliminate paper-based logs.',
+    description: 'Led a 3-person engineering team end-to-end — from system architecture to production APK delivery. Built an offline-first Android application in Java and SQLite that replaced manual paper rolls for 200+ active student records with instant CSV/Excel export, automated percentage auditing, and tamper-resistant local records.',
+    category: 'Diploma Capstone Project',
+    year: '2024',
+    tags: ['Java', 'SQLite', 'MVC Architecture', 'Offline Local Storage'],
+    role: 'Lead Android Engineer & Architect',
+    featuredAward: '2ND PLACE — DISTRICT LEVEL HACKATHON',
+    featuredAwardYear: '2024',
+    highlights: [
+      'Led a 3-person team end-to-end – from data schema design through delivery – building a scalable Android app replacing a manual attendance process for 200+ student records',
+      'Won 2nd Place at a District-Level Hackathon against multiple colleges, demonstrating algorithm-driven problem-solving under time pressure'
+    ],
+    architectureOverview: 'Clean Layered Architecture with Local SQLite Persistence Provider, Repository Pattern, and UI Activity View Binding.',
+    metrics: [
+      { label: 'Student Records', value: '200+' },
+      { label: 'Network Dependency', value: '0% (Offline)' },
+      { label: 'Hackathon Rank', value: '2nd Place' },
+      { label: 'Team Size', value: '3 Engineers' }
+    ],
+    githubUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
+    liveUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
+    visualType: 'presentplus'
   },
   {
     id: 'placement-management',
@@ -115,10 +111,10 @@ export const EXPERIENCES: Experience[] = [
     locationType: 'On-site',
     description: 'Engineered and shipped production Android features using Java, XML, Activities, and Intents within a live client-facing software product.',
     achievements: [
-      'Engineered and shipped production Android features using Java, XML, Activities, and Intents within a live software product, contributing to a real-world client-facing codebase.',
-      'Integrated backend logic with modular UI workflows, improving code maintainability by an estimated 20% and reducing average debugging time across feature releases.',
-      'Identified, triaged, and resolved 15+ runtime crashes through systematic debugging and unit testing, directly improving application stability and reliability.',
-      'Collaborated daily with a cross-functional team using Git-based version control, gaining hands-on experience with branching strategies, pull requests, and code review workflows.'
+      'Engineered and shipped 5+ production Android features using Java, MVC architecture, XML, Activities, and Intents within a live client-facing codebase',
+      'Integrated backend REST API logic with modular, multithreaded UI workflows following SOLID principles, improving code maintainability by an estimated 20% and reducing debugging time',
+      'Identified and resolved 15+ runtime crashes via systematic root-cause analysis and unit testing, directly improving application stability',
+      'Contributed to 10+ pull requests using Git-based version control, enforcing branching standards across a cross-functional engineering team'
     ],
     techStack: ['Java', 'Android SDK', 'XML', 'Android Studio', 'Git', 'Debugging']
   }
