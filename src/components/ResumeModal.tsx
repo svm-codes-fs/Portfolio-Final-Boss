@@ -87,7 +87,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(8.5);
       doc.setTextColor(50, 50, 50);
-      const summary = `Computer Engineering undergraduate at Thapar Institute of Engineering and Technology (Batch of 2028) with hands-on software engineering experience in Android development, backend systems, REST APIs, and machine learning. Strong foundation in Data Structures & Algorithms, Object-Oriented Programming, and proven track record of shipping production-quality code.`;
+      const summary = `Computer Engineering undergraduate at Thapar Institute of Engineering and Technology with hands-on experience building Android applications, backend systems, REST APIs, and machine learning solutions. Strong foundation in Data Structures and Algorithms, Object-Oriented Programming, and software engineering principles, with experience in Java, C++, Python, SQL, Flask, Git, and Android development. Proven ability to design, debug, and deliver software through team-based projects and real-world development experience.`;
       const splitSummary = doc.splitTextToSize(summary, contentWidth);
       doc.text(splitSummary, margin, y);
       y += splitSummary.length * 4 + 3;
@@ -103,10 +103,12 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
       doc.setFontSize(8.5);
       doc.setTextColor(50, 50, 50);
       const skills = [
-        'Languages: Java, C++, Python, SQL, JavaScript, TypeScript, XML',
-        'Mobile & Frontend: Android SDK, Native Java, React, Tailwind CSS, Responsive Design',
-        'Backend & Databases: Flask, Node.js, Express, REST APIs, SQLite, MySQL',
-        'AI & Tools: Explainable AI (XAI), scikit-learn, Git, GitHub, Android Studio, VS Code',
+        'Languages: Java, C++, Python, SQL',
+        'Software Engineering: DSA, Algorithm Design, OOP, SOLID Principles, MVC Architecture, Multithreading, Debugging, Agile Collaboration',
+        'Backend & APIs: Flask, RESTful API Design & Integration, SQLite, Database Design, Server-Side Logic',
+        'Android: Android SDK, XML, Activities, Intents, Android Studio, Offline Storage',
+        'ML & Data: scikit-learn, Predictive Modeling, Explainable AI (XAI), Agentic AI, Feature Engineering, Risk Modeling',
+        'Tools: Git, GitHub, VS Code, Jupyter Notebook; learning Spring Boot, AWS, System Design',
       ];
       skills.forEach((s) => {
         doc.text(`•  ${s}`, margin, y);
@@ -151,19 +153,32 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
       doc.text('KEY ENGINEERING PROJECTS', margin, y);
       y += 4.5;
 
-      PROJECTS.slice(0, 3).forEach((proj) => {
+      PROJECTS.slice(0, 2).forEach((proj) => {
         doc.setFont('helvetica', 'bold');
         doc.setFontSize(9.5);
         doc.setTextColor(20, 20, 20);
         doc.text(`${proj.title} - ${proj.subtitle}`, margin, y);
+        
+        doc.setFont('helvetica', 'italic');
+        doc.setFontSize(8.5);
+        doc.setTextColor(100, 100, 100);
+        doc.text(`${proj.category}`, pageWidth - margin - 50, y);
+        y += 4;
+        
+        doc.setFont('helvetica', 'italic');
+        doc.setFontSize(8.5);
+        doc.setTextColor(100, 100, 100);
+        doc.text(proj.tags.slice(0, 5).join(', '), margin, y);
         y += 4;
 
         doc.setFont('helvetica', 'normal');
-        doc.setFontSize(8.5);
         doc.setTextColor(50, 50, 50);
-        const splitDesc = doc.splitTextToSize(`•  ${proj.description}`, contentWidth);
-        doc.text(splitDesc, margin + 2, y);
-        y += splitDesc.length * 3.8 + 1.5;
+        proj.highlights.forEach((highlight) => {
+          const splitDesc = doc.splitTextToSize(`•  ${highlight}`, contentWidth);
+          doc.text(splitDesc, margin + 2, y);
+          y += splitDesc.length * 3.8;
+        });
+        y += 2.5;
       });
 
       // Section: Education & Certifications
@@ -300,7 +315,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               // PROFESSIONAL SUMMARY
             </h2>
             <p className="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">
-              Computer Engineering undergraduate at Thapar Institute of Engineering and Technology (Batch of 2028) with hands-on software engineering experience in Android development, backend systems, REST APIs, and machine learning. Strong foundation in Data Structures & Algorithms and Object-Oriented Programming, with proven ability to build, debug, and ship production-quality code in cross-functional teams.
+              Computer Engineering undergraduate at Thapar Institute of Engineering and Technology with hands-on experience building Android applications, backend systems, REST APIs, and machine learning solutions. Strong foundation in Data Structures and Algorithms, Object-Oriented Programming, and software engineering principles, with experience in Java, C++, Python, SQL, Flask, Git, and Android development. Proven ability to design, debug, and deliver software through team-based projects and real-world development experience.
             </p>
           </div>
 
@@ -311,20 +326,28 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono-code">
               <div className="p-3 rounded bg-[#141414] border border-[#222222]">
-                <span className="text-[#A0A0A0] block text-[10px]">PROGRAMMING LANGUAGES</span>
-                <span className="text-[#F5F5F0] font-semibold">Java, C++, Python, SQL, JavaScript, TypeScript</span>
+                <span className="text-[#A0A0A0] block text-[10px]">LANGUAGES</span>
+                <span className="text-[#F5F5F0] font-semibold">Java, C++, Python, SQL</span>
               </div>
               <div className="p-3 rounded bg-[#141414] border border-[#222222]">
-                <span className="text-[#A0A0A0] block text-[10px]">MOBILE & FRONTEND</span>
-                <span className="text-[#F5F5F0] font-semibold">Android SDK, XML, Activities/Intents, React, Tailwind CSS</span>
+                <span className="text-[#A0A0A0] block text-[10px]">SOFTWARE ENGINEERING</span>
+                <span className="text-[#F5F5F0] font-semibold">DSA, Algorithm Design, OOP, SOLID Principles, MVC Architecture, Multithreading, Debugging, Agile Collaboration</span>
               </div>
               <div className="p-3 rounded bg-[#141414] border border-[#222222]">
-                <span className="text-[#A0A0A0] block text-[10px]">BACKEND & DATABASES</span>
-                <span className="text-[#F5F5F0] font-semibold">Flask, REST API Design, SQLite, MySQL, Node.js</span>
+                <span className="text-[#A0A0A0] block text-[10px]">BACKEND & APIs</span>
+                <span className="text-[#F5F5F0] font-semibold">Flask, RESTful API Design & Integration, SQLite, Database Design, Server-Side Logic</span>
               </div>
               <div className="p-3 rounded bg-[#141414] border border-[#222222]">
-                <span className="text-[#A0A0A0] block text-[10px]">AI & TOOLS</span>
-                <span className="text-[#F5F5F0] font-semibold">scikit-learn, Explainable AI (XAI), Git, GitHub, VS Code, Android Studio</span>
+                <span className="text-[#A0A0A0] block text-[10px]">ANDROID</span>
+                <span className="text-[#F5F5F0] font-semibold">Android SDK, XML, Activities, Intents, Android Studio, Offline Storage</span>
+              </div>
+              <div className="p-3 rounded bg-[#141414] border border-[#222222]">
+                <span className="text-[#A0A0A0] block text-[10px]">ML & DATA</span>
+                <span className="text-[#F5F5F0] font-semibold">scikit-learn, Predictive Modeling, Explainable AI (XAI), Agentic AI, Feature Engineering, Risk Modeling</span>
+              </div>
+              <div className="p-3 rounded bg-[#141414] border border-[#222222]">
+                <span className="text-[#A0A0A0] block text-[10px]">TOOLS</span>
+                <span className="text-[#F5F5F0] font-semibold">Git, GitHub, VS Code, Jupyter Notebook; learning Spring Boot, AWS, System Design</span>
               </div>
             </div>
           </div>
@@ -362,19 +385,27 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               // KEY ENGINEERING PROJECTS
             </h2>
             <div className="space-y-3">
-              {PROJECTS.map((proj) => (
-                <div key={proj.id} className="p-4 rounded-xl bg-[#141414] border border-[#222222] space-y-1.5">
+              {PROJECTS.slice(0, 2).map((proj) => (
+                <div key={proj.id} className="p-4 rounded-xl bg-[#141414] border border-[#222222] space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <h3 className="text-sm font-bold text-[#F5F5F0] uppercase font-headline">
                       {proj.title} — {proj.subtitle}
                     </h3>
-                    <span className="font-mono-code text-xs text-[#A0A0A0]">
-                      {proj.tags.slice(0, 3).join(', ')}
+                    <span className="font-mono-code text-xs text-[#C8FF00]">
+                      {proj.category}
                     </span>
                   </div>
-                  <p className="text-xs text-[#A0A0A0] leading-relaxed">
-                    {proj.description}
-                  </p>
+                  <div className="font-mono-code text-[10px] text-[#A0A0A0]">
+                    {proj.tags.join(', ')}
+                  </div>
+                  <ul className="space-y-1.5 text-xs text-[#A0A0A0] pt-1">
+                    {proj.highlights.map((highlight, hIdx) => (
+                      <li key={hIdx} className="flex items-start gap-2">
+                        <span className="text-[#C8FF00]">›</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
