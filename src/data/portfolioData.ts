@@ -45,8 +45,8 @@ export const PROJECTS: Project[] = [
       { label: 'Hackathon Rank', value: '2nd Place' },
       { label: 'Team Size', value: '3 Engineers' }
     ],
-    githubUrl: 'https://github.com/svm-codes-fs/presentplus',
-    liveUrl: 'https://github.com/svm-codes-fs/presentplus',
+    githubUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
+    liveUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
     visualType: 'presentplus'
   },
   {
@@ -73,8 +73,8 @@ export const PROJECTS: Project[] = [
       { label: 'Decision Audit', value: '100% XAI' },
       { label: 'Framework', value: 'Flask + scikit' }
     ],
-    githubUrl: 'https://github.com/svm-codes-fs/loanlens-ml',
-    liveUrl: 'https://github.com/svm-codes-fs/loanlens-ml',
+    githubUrl: 'https://github.com/svm-codes-fs/LoanLens',
+    liveUrl: 'https://loan-lens-black.vercel.app/',
     visualType: 'loanlens'
   },
   {
@@ -100,8 +100,8 @@ export const PROJECTS: Project[] = [
       { label: 'Data Model', value: 'Normalized SQL' },
       { label: 'Stack', value: 'React / Node' }
     ],
-    githubUrl: 'https://github.com/svm-codes-fs/placement-system',
-    liveUrl: 'https://github.com/svm-codes-fs/placement-system',
+    githubUrl: 'https://github.com/svm-codes-fs/Placement-management-system',
+    liveUrl: 'https://github.com/svm-codes-fs/Placement-management-system',
     visualType: 'placement'
   }
 ];
