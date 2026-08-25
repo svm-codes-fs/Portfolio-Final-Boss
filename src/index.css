@@ -97,10 +97,89 @@ html.lenis, html.lenis body {
 }
 
 /* Hide standard cursor when custom cursor is active on desktop */
+
 @media (hover: hover) and (pointer: fine) {
   .custom-cursor-active,
   .custom-cursor-active * {
     cursor: none !important;
+  }
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
+  html {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
+  .film-grain {
+    display: none !important;
+  }
+
+  /* Force the resume modal to be a static block for printing */
+  .print-resume-wrapper {
+    position: static !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+  
+  .print-resume-backdrop {
+    display: none !important;
+  }
+  
+  .print-resume-card {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  /* Force all text in the resume card to be black for printing */
+  .print-resume-card * {
+    color: black !important;
+    border-color: #ddd !important;
+  }
+
+  /* Reduce spacing inside the resume so it fits on one page */
+  .print-resume-card .space-y-8 > * + * {
+    margin-top: 1.25rem !important; /* overrides 2rem */
+  }
+  
+  .print-resume-card .space-y-6 > * + * {
+    margin-top: 0.75rem !important;
+  }
+
+  .print-resume-card .space-y-4 > * + * {
+    margin-top: 0.5rem !important;
+  }
+  
+  .print-resume-card h1 {
+    font-size: 2rem !important;
+  }
+  
+  .print-resume-card h2 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .print-resume-card p, .print-resume-card span, .print-resume-card li {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 10mm;
   }
 }
 

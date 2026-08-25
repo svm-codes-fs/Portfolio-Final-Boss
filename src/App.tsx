@@ -78,10 +78,12 @@ export default function App() {
       <CustomCursor />
 
       {/* Minimal Sticky Navigation */}
-      <Navbar onOpenResume={handleOpenResume} onOpenContact={handleOpenContact} />
+      <div className="print:hidden">
+        <Navbar onOpenResume={handleOpenResume} onOpenContact={handleOpenContact} />
+      </div>
 
       {/* Main Page Flow */}
-      <main className="relative z-10 flex flex-col w-full">
+      <main className="relative z-10 flex flex-col w-full print:hidden">
         {/* 01 — Cinematic Hero Opening Scene */}
         <Hero onOpenContact={handleOpenContact} />
 
@@ -111,7 +113,9 @@ export default function App() {
       </main>
 
       {/* 10 — Minimal Footer */}
-      <Footer />
+      <div className="print:hidden">
+        <Footer />
+      </div>
 
       {/* Full Curriculum Vitae Modal */}
       <ResumeModal isOpen={isResumeOpen} onClose={handleCloseResume} />

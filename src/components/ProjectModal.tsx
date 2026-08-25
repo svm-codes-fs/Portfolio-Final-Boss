@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Project } from '../types';
 import { X, ArrowUpRight, Github, CheckCircle2, ShieldAlert, Database, Cpu, Layers } from 'lucide-react';
 import { ProjectMockupVisual } from './ProjectMockupVisual';
@@ -25,13 +26,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   if (!project) return null;
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6 md:p-10 bg-[#090909]/90 backdrop-blur-xl animate-fadeIn">
       {/* Click outside backdrop */}
       <div className="absolute inset-0" onClick={onClose} />
 
       {/* Modal Container */}
-      <div className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0F0F0F] border border-[#262626] rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl flex flex-col justify-between">
+      <div 
+        data-lenis-prevent="true"
+        className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0F0F0F] border border-[#262626] rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl flex flex-col justify-between"
+      >
         {/* Modal Top Header */}
         <div className="flex items-start justify-between border-b border-[#222222] pb-6 mb-8">
           <div>
@@ -156,6 +160,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

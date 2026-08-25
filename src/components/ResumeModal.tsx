@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { X, Download, Copy, Check, ArrowUpRight, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Printer } from 'lucide-react';
+import { X, Download, Copy, Check, ArrowUpRight, Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from 'lucide-react';
 import { PERSONAL_INFO, PROJECTS, EXPERIENCES, ACHIEVEMENTS, EDUCATIONS } from '../data/portfolioData';
-import { jsPDF } from 'jspdf';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -10,7 +9,6 @@ interface ResumeModalProps {
 
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   const [copied, setCopied] = useState(false);
-  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -32,204 +30,18 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handlePrint = () => {
-    window.print();
-  };
-
-  const handleDownloadPdf = () => {
-    setIsGeneratingPdf(true);
-    try {
-      const doc = new jsPDF({
-        orientation: 'portrait',
-        unit: 'mm',
-        format: 'a4',
-      });
-
-      const margin = 15;
-      let y = 18;
-      const pageWidth = doc.internal.pageSize.getWidth();
-      const contentWidth = pageWidth - margin * 2;
-
-      // Header - Name
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(22);
-      doc.setTextColor(20, 20, 20);
-      doc.text('SHIVAM RAJ', margin, y);
-      y += 6;
-
-      // Subtitle
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      doc.setTextColor(80, 80, 80);
-      doc.text('Computer Engineering Undergraduate | Software Developer | Full-Stack & Android', margin, y);
-      y += 5;
-
-      // Contact Line
-      doc.setFontSize(8.5);
-      doc.setTextColor(100, 100, 100);
-      const contactInfo = `Email: ${PERSONAL_INFO.email}  |  Phone: ${PERSONAL_INFO.phone}  |  Location: Patiala, India  |  GitHub: github.com/svm-codes-fs`;
-      doc.text(contactInfo, margin, y);
-      y += 4;
-
-      // Divider
-      doc.setDrawColor(200, 200, 200);
-      doc.setLineWidth(0.4);
-      doc.line(margin, y, pageWidth - margin, y);
-      y += 6;
-
-      // Section: Professional Summary
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.setTextColor(15, 23, 42);
-      doc.text('PROFESSIONAL SUMMARY', margin, y);
-      y += 4.5;
-
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(8.5);
-      doc.setTextColor(50, 50, 50);
-      const summary = `Computer Engineering undergraduate at Thapar Institute of Engineering and Technology with hands-on experience building Android applications, backend systems, REST APIs, and machine learning solutions. Strong foundation in Data Structures and Algorithms, Object-Oriented Programming, and software engineering principles, with experience in Java, C++, Python, SQL, Flask, Git, and Android development. Proven ability to design, debug, and deliver software through team-based projects and real-world development experience.`;
-      const splitSummary = doc.splitTextToSize(summary, contentWidth);
-      doc.text(splitSummary, margin, y);
-      y += splitSummary.length * 4 + 3;
-
-      // Section: Technical Skills
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.setTextColor(15, 23, 42);
-      doc.text('TECHNICAL SKILLS & COMPETENCIES', margin, y);
-      y += 4.5;
-
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(8.5);
-      doc.setTextColor(50, 50, 50);
-      const skills = [
-        'Languages: Java, C++, Python, SQL',
-        'Software Engineering: DSA, Algorithm Design, OOP, SOLID Principles, MVC Architecture, Multithreading, Debugging, Agile Collaboration',
-        'Backend & APIs: Flask, RESTful API Design & Integration, SQLite, Database Design, Server-Side Logic',
-        'Android: Android SDK, XML, Activities, Intents, Android Studio, Offline Storage',
-        'ML & Data: scikit-learn, Predictive Modeling, Explainable AI (XAI), Agentic AI, Feature Engineering, Risk Modeling',
-        'Tools: Git, GitHub, VS Code, Jupyter Notebook; learning Spring Boot, AWS, System Design',
-      ];
-      skills.forEach((s) => {
-        doc.text(`•  ${s}`, margin, y);
-        y += 4;
-      });
-      y += 3;
-
-      // Section: Experience
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.setTextColor(15, 23, 42);
-      doc.text('WORK EXPERIENCE', margin, y);
-      y += 4.5;
-
-      EXPERIENCES.forEach((exp) => {
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(9.5);
-        doc.setTextColor(20, 20, 20);
-        doc.text(`${exp.role} - ${exp.company}`, margin, y);
-
-        doc.setFont('helvetica', 'italic');
-        doc.setFontSize(8.5);
-        doc.setTextColor(100, 100, 100);
-        doc.text(`${exp.period} | ${exp.locationType}`, pageWidth - margin - 50, y);
-        y += 4;
-
-        doc.setFont('helvetica', 'normal');
-        doc.setTextColor(50, 50, 50);
-        exp.achievements.forEach((ach) => {
-          const achText = `•  ${ach}`;
-          const splitAch = doc.splitTextToSize(achText, contentWidth);
-          doc.text(splitAch, margin + 2, y);
-          y += splitAch.length * 3.8;
-        });
-        y += 2.5;
-      });
-
-      // Section: Key Projects
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.setTextColor(15, 23, 42);
-      doc.text('KEY ENGINEERING PROJECTS', margin, y);
-      y += 4.5;
-
-      PROJECTS.slice(0, 2).forEach((proj) => {
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(9.5);
-        doc.setTextColor(20, 20, 20);
-        doc.text(`${proj.title} - ${proj.subtitle}`, margin, y);
-        
-        doc.setFont('helvetica', 'italic');
-        doc.setFontSize(8.5);
-        doc.setTextColor(100, 100, 100);
-        doc.text(`${proj.category}`, pageWidth - margin - 50, y);
-        y += 4;
-        
-        doc.setFont('helvetica', 'italic');
-        doc.setFontSize(8.5);
-        doc.setTextColor(100, 100, 100);
-        doc.text(proj.tags.slice(0, 5).join(', '), margin, y);
-        y += 4;
-
-        doc.setFont('helvetica', 'normal');
-        doc.setTextColor(50, 50, 50);
-        proj.highlights.forEach((highlight) => {
-          const splitDesc = doc.splitTextToSize(`•  ${highlight}`, contentWidth);
-          doc.text(splitDesc, margin + 2, y);
-          y += splitDesc.length * 3.8;
-        });
-        y += 2.5;
-      });
-
-      // Section: Education & Certifications
-      if (y > 240) {
-        doc.addPage();
-        y = 18;
-      }
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.setTextColor(15, 23, 42);
-      doc.text('EDUCATION & HONORS', margin, y);
-      y += 4.5;
-
-      EDUCATIONS.forEach((edu) => {
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(9);
-        doc.setTextColor(20, 20, 20);
-        doc.text(`${edu.degree} - ${edu.institution}`, margin, y);
-        doc.setFont('helvetica', 'normal');
-        doc.setTextColor(100, 100, 100);
-        doc.text(`${edu.period}`, pageWidth - margin - 30, y);
-        y += 4;
-      });
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(9);
-      doc.setTextColor(20, 20, 20);
-      doc.text('•  Oracle Certified Associate: Foundations of Agentic AI (Credential ID: 330498011AAI26OFA)', margin, y);
-      y += 4;
-      doc.text('•  2nd Place Finalist - District Level Hackathon (PresentPlus Android App)', margin, y);
-
-      // Save the generated PDF
-      doc.save('Shivam_Raj_Resume.pdf');
-    } catch (err) {
-      console.error('Error generating PDF:', err);
-      window.print();
-    } finally {
-      setIsGeneratingPdf(false);
-    }
-  };
-
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-center justify-center p-3 sm:p-6 md:p-10 bg-[#090909]/95 backdrop-blur-xl animate-fadeIn">
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center p-3 sm:p-6 md:p-10 bg-[#090909]/95 backdrop-blur-xl animate-fadeIn print-resume-wrapper">
       {/* Click outside backdrop */}
-      <div className="absolute inset-0" onClick={onClose} />
+      <div className="absolute inset-0 print-resume-backdrop" onClick={onClose} />
 
       {/* Modal Card */}
-      <div className="relative z-10 w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#0E0E0E] border border-[#262626] rounded-2xl p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col justify-between">
+      <div 
+        data-lenis-prevent="true"
+        className="relative z-10 w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#0E0E0E] border border-[#262626] rounded-2xl p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col justify-between print-resume-card"
+      >
         {/* Actions Bar */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#222222] pb-5 mb-8 print:hidden">
           <div className="flex items-center gap-2 font-mono-code text-xs text-[#C8FF00] uppercase tracking-widest">
@@ -266,14 +78,6 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               <Download className="w-3.5 h-3.5" />
               <span>DOWNLOAD RESUME (.PDF)</span>
             </a>
-
-            <button
-              onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#181818] border border-[#2A2A2A] text-[#F5F5F0] text-xs font-mono-code hover:border-white/40 transition-colors"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">PRINT</span>
-            </button>
 
             <button
               onClick={onClose}

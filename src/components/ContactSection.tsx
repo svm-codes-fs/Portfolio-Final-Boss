@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ArrowUpRight, Mail, Github, Linkedin, Copy, Check, Send, Sparkles, ExternalLink, Loader2, AlertCircle } from 'lucide-react';
 
@@ -200,7 +201,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
       </div>
 
       {/* Interactive Contact Form Modal */}
-      {showFormModal && (
+      {showFormModal && createPortal(
         <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6 bg-[#090909]/95 backdrop-blur-xl animate-fadeIn">
           <div className="absolute inset-0" onClick={() => setShowFormModal(false)} />
           <div className="relative z-10 w-full max-w-lg bg-[#0F0F0F] border border-[#262626] rounded-2xl p-6 sm:p-8 shadow-2xl">
@@ -347,7 +348,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               </form>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
