@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Sparkles, MessageSquare } from 'lucide-react';
+import avatarImg from '../assets/avatar.jpg';
 
 interface AvatarCardProps {
   onOpenContact?: () => void;
@@ -60,7 +61,7 @@ export const AvatarCard: React.FC<AvatarCardProps> = ({ onOpenContact }) => {
             isHovered ? 'grayscale-0 filter-none' : 'grayscale contrast-110 opacity-90'
           }`}
         >
-          <img src="/image.jpg?v=3" alt="Profile" className="w-full h-full object-cover block" />
+          <img src={avatarImg} alt="Profile" className="w-full h-full object-cover block" />
         </div>
 
         {/* Live Glow Overlay on Hover */}

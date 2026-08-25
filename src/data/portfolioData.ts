@@ -139,7 +139,8 @@ export const ACHIEVEMENTS: Achievement[] = [
     subcontext: 'CREDENTIAL ID: 330498011AAI26OFA',
     year: '2026',
     description: 'Certified by Oracle University in foundational Agentic AI concepts, autonomous tool calling, multi-agent coordination, and predictive model integration.',
-    tags: ['Oracle', 'Agentic AI', 'Certification', 'AI Systems']
+    tags: ['Oracle', 'Agentic AI', 'Certification', 'AI Systems'],
+    link: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=66578755EF293EBCAB385B4E29A875473005EC110011AAFF0149607F778F87EC'
   }
 ];
 

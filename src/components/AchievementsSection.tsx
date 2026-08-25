@@ -1,6 +1,6 @@
 import React from 'react';
 import { ACHIEVEMENTS } from '../data/portfolioData';
-import { Trophy, Award, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { Trophy, Award, GraduationCap, CheckCircle2, ExternalLink } from 'lucide-react';
 
 export const AchievementsSection: React.FC = () => {
   const getIcon = (index: number) => {
@@ -87,7 +87,7 @@ export const AchievementsSection: React.FC = () => {
                     {ach.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 pt-2 font-mono-code text-xs">
+                  <div className="flex flex-wrap gap-2 pt-2 font-mono-code text-xs items-center">
                     {ach.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
@@ -96,6 +96,17 @@ export const AchievementsSection: React.FC = () => {
                         {tag}
                       </span>
                     ))}
+                    {ach.link && (
+                      <a
+                        href={ach.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-1 ml-auto rounded-md bg-[#C8FF00]/10 border border-[#C8FF00]/30 text-[#C8FF00] hover:bg-[#C8FF00] hover:text-[#0a0c10] uppercase text-[11px] tracking-wider font-bold transition-colors"
+                      >
+                        Verify Credentials
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
