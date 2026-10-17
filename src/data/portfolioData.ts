@@ -100,33 +100,6 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
     liveUrl: 'https://github.com/svm-codes-fs/svm-codes-fs-PresentPlus',
     visualType: 'presentplus'
-  },
-  {
-    id: 'placement-management',
-    number: '04',
-    title: 'PLACEMENT ENGINE',
-    subtitle: 'Campus Recruitment & Candidate Tracking System',
-    tagline: 'Role-based campus hiring platform streamlining student eligibility, drives, and interview funnels.',
-    description: 'Full-stack campus placement portal designed to coordinate student eligibility verification, company job listings, application status funnels, and recruitment analytics for institutional training and placement cells.',
-    category: 'Full-Stack & Database Engineering',
-    year: '2024',
-    tags: ['React', 'Node.js', 'SQL', 'RESTful APIs', 'Role-Based Access'],
-    role: 'Full-Stack Developer',
-    highlights: [
-      'Developed role-based authentication and access control tiers for Students, Placement Coordinators, and Company Recruiters.',
-      'Designed normalized relational schema with indexing on student GPA, backlog counts, and skill tags for automated filtering.',
-      'Implemented real-time drive notification pipeline and dynamic applicant status tracking board.'
-    ],
-    architectureOverview: 'Client-Server Architecture with JWT Auth, REST Endpoints, and Structured Relational Database Store.',
-    metrics: [
-      { label: 'Role Portals', value: '3 Distinct' },
-      { label: 'Filter Speed', value: 'Instant' },
-      { label: 'Data Model', value: 'Normalized SQL' },
-      { label: 'Stack', value: 'React / Node' }
-    ],
-    githubUrl: 'https://github.com/svm-codes-fs/Placement-management-system',
-    liveUrl: 'https://github.com/svm-codes-fs/Placement-management-system',
-    visualType: 'placement'
   }
 ];
 
@@ -169,6 +142,16 @@ export const ACHIEVEMENTS: Achievement[] = [
     description: 'Certified by Oracle University in foundational Agentic AI concepts, autonomous tool calling, multi-agent coordination, and predictive model integration.',
     tags: ['Oracle', 'Agentic AI', 'Certification', 'AI Systems'],
     link: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=66578755EF293EBCAB385B4E29A875473005EC110011AAFF0149607F778F87EC'
+  },
+  {
+    number: '03',
+    place: 'CERTIFIED',
+    title: 'AWS CLOUD FOUNDATIONS',
+    context: 'AWS ACADEMY — AMAZON WEB SERVICES',
+    subcontext: 'AWS ACADEMY CLOUD FOUNDATIONS',
+    year: '2026',
+    description: 'Completed AWS Academy Cloud Foundations, covering core AWS services (EC2, S3, VPC, IAM, RDS), cloud architecture and security fundamentals, the shared responsibility model, and cloud pricing and support.',
+    tags: ['AWS', 'Cloud Computing', 'Certification', 'Cloud Architecture']
   }
 ];
 

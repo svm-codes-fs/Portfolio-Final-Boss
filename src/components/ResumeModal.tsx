@@ -151,7 +151,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               </div>
               <div className="p-3 rounded bg-[#141414] border border-[#222222]">
                 <span className="text-[#A0A0A0] block text-[10px]">TOOLS</span>
-                <span className="text-[#F5F5F0] font-semibold">Git, GitHub, VS Code, Jupyter Notebook; learning Spring Boot, AWS, System Design</span>
+                <span className="text-[#F5F5F0] font-semibold">Git, GitHub, VS Code, Jupyter Notebook, AWS; learning Spring Boot, System Design</span>
               </div>
             </div>
           </div>
@@ -240,6 +240,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 <div className="border-l-2 border-[#C8FF00] pl-3">
                   <div className="font-bold text-[#F5F5F0]">Oracle Certified Associate — Agentic AI</div>
                   <div className="text-[#A0A0A0]">Credential ID: 330498011AAI26OFA · Aug 2026</div>
+                </div>
+                <div className="border-l-2 border-[#C8FF00] pl-3">
+                  <div className="font-bold text-[#F5F5F0]">AWS Academy Cloud Foundations</div>
+                  <div className="text-[#A0A0A0]">Amazon Web Services · Sep 2026</div>
                 </div>
                 <div className="border-l-2 border-[#C8FF00] pl-3">
                   <div className="font-bold text-[#F5F5F0]">2nd Place — District Level Hackathon</div>

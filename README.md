@@ -5,7 +5,7 @@ A personal portfolio website for Shivam Raj, Computer Engineering student at Tha
 ## Features
 
 - **Hero and about** sections with a short personal statement and focus areas
-- **Selected work:** project cards with tags, metrics and an expandable detail modal (LoanLens, PresentPlus, Placement Engine)
+- **Selected work:** project cards with tags, metrics and an expandable detail modal (PlaceIQ, LoanLens, PresentPlus)
 - **Experience, achievements and education** timelines
 - **What I build** and **skills** sections grouped by domain (Android, full-stack, machine learning, backend, databases)
 - **Résumé modal** with view and download links
