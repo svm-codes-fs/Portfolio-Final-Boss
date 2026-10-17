@@ -148,10 +148,11 @@ export const ACHIEVEMENTS: Achievement[] = [
     place: 'CERTIFIED',
     title: 'AWS CLOUD FOUNDATIONS',
     context: 'AWS ACADEMY — AMAZON WEB SERVICES',
-    subcontext: 'AWS ACADEMY CLOUD FOUNDATIONS',
+    subcontext: 'AWS ACADEMY GRADUATE — CLOUD FOUNDATIONS (CREDLY)',
     year: '2026',
     description: 'Completed AWS Academy Cloud Foundations, covering core AWS services (EC2, S3, VPC, IAM, RDS), cloud architecture and security fundamentals, the shared responsibility model, and cloud pricing and support.',
-    tags: ['AWS', 'Cloud Computing', 'Certification', 'Cloud Architecture']
+    tags: ['AWS', 'Cloud Computing', 'Certification', 'Cloud Architecture'],
+    link: 'https://www.credly.com/badges/47201e1f-6c8e-4621-8ed1-cbfdc0348895'
   }
 ];
 
