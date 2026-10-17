@@ -170,7 +170,7 @@ export const ProjectMockupVisual: React.FC<ProjectMockupVisualProps> = ({ type }
         <div className="relative z-10 flex items-center justify-between border-b border-[#222222] pb-3 font-mono-code text-xs">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#C8FF00]" />
-            <span className="text-[#F5F5F0] font-semibold tracking-wider uppercase">PLACEIQ // SEMANTIC_MATCHING</span>
+            <span className="text-[#F5F5F0] font-semibold tracking-wider uppercase">PLACEIQ // AI_MATCHING</span>
           </div>
           <span className="px-2 py-0.5 rounded bg-[#C8FF00]/15 text-[#C8FF00] text-[10px] font-bold tracking-widest uppercase">
             PGVECTOR + CLAUDE
