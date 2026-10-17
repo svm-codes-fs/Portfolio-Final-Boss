@@ -2,7 +2,7 @@ import React from 'react';
 import { Smartphone, CheckCircle, XCircle, AlertCircle, Database, ShieldAlert, Cpu, BarChart3, Users, FileSpreadsheet, Layers, Sparkles } from 'lucide-react';
 
 interface ProjectMockupVisualProps {
-  type: 'presentplus' | 'loanlens' | 'placement' | 'agentic';
+  type: 'presentplus' | 'loanlens' | 'placement' | 'placeiq' | 'agentic';
 }
 
 export const ProjectMockupVisual: React.FC<ProjectMockupVisualProps> = ({ type }) => {
@@ -156,6 +156,79 @@ export const ProjectMockupVisual: React.FC<ProjectMockupVisualProps> = ({ type }
         <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[#222222] font-mono-code text-[11px] text-[#A0A0A0]">
           <span>AUDITABLE INFERENCE</span>
           <span className="text-[#C8FF00]">REST API ENDPOINTS</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (type === 'placeiq') {
+    return (
+      <div className="w-full h-full min-h-[340px] sm:min-h-[420px] bg-[#0E0E0E] rounded-xl border border-[#222222] p-4 sm:p-6 flex flex-col justify-between overflow-hidden relative group-hover:border-[#C8FF00]/40 transition-colors">
+        <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
+
+        {/* Header */}
+        <div className="relative z-10 flex items-center justify-between border-b border-[#222222] pb-3 font-mono-code text-xs">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#C8FF00]" />
+            <span className="text-[#F5F5F0] font-semibold tracking-wider uppercase">PLACEIQ // SEMANTIC_MATCHING</span>
+          </div>
+          <span className="px-2 py-0.5 rounded bg-[#C8FF00]/15 text-[#C8FF00] text-[10px] font-bold tracking-widest uppercase">
+            PGVECTOR + CLAUDE
+          </span>
+        </div>
+
+        {/* Ranked Job Matches Simulation */}
+        <div className="relative z-10 my-auto py-3">
+          <div className="max-w-md mx-auto bg-[#141414] rounded-lg border border-[#282828] p-3 sm:p-4 shadow-2xl space-y-3">
+            <div className="flex justify-between items-center pb-2 border-b border-[#222222]">
+              <div>
+                <span className="text-[10px] text-[#A0A0A0] font-mono-code">RESUME PARSED BY AI</span>
+                <div className="text-sm font-bold text-[#C8FF00] flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4" /> 14 SKILLS · 3 PROJECTS
+                </div>
+              </div>
+              <div className="text-right">
+                <span className="text-[9px] text-[#A0A0A0] font-mono-code">PRECISION@5</span>
+                <div className="text-xs font-mono-code text-[#F5F5F0]">0.95</div>
+              </div>
+            </div>
+
+            <div className="space-y-2 font-mono-code text-xs">
+              <span className="text-[10px] text-[#A0A0A0] uppercase tracking-wider block">
+                Drives Ranked By Fit
+              </span>
+              {[
+                { company: 'Texas Instruments · Backend Engineer', fit: '92%', width: '92%', eligible: true },
+                { company: 'Adobe · Full-Stack Developer', fit: '84%', width: '84%', eligible: true },
+                { company: 'Goldman Sachs · Analyst', fit: '71%', width: '71%', eligible: false },
+              ].map((item, idx) => (
+                <div key={idx} className="space-y-1">
+                  <div className="flex justify-between text-[11px]">
+                    <span className="text-[#F5F5F0]">{item.company}</span>
+                    {item.eligible ? (
+                      <span className="text-[#C8FF00]">{item.fit}</span>
+                    ) : (
+                      <span className="flex items-center gap-1 text-[#FF4D4D]">
+                        <AlertCircle className="w-3 h-3" /> CGPA RULE
+                      </span>
+                    )}
+                  </div>
+                  <div className="h-1.5 w-full bg-[#222222] rounded-full overflow-hidden">
+                    <div
+                      className={`h-full rounded-full ${item.eligible ? 'bg-[#C8FF00]' : 'bg-[#FF4D4D]'}`}
+                      style={{ width: item.width }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[#222222] font-mono-code text-[11px] text-[#A0A0A0]">
+          <span>MULTI-TENANT ISOLATION</span>
+          <span className="text-[#C8FF00]">CELERY + SOCKET.IO</span>
         </div>
       </div>
     );

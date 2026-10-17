@@ -16,7 +16,7 @@ export interface Project {
   metrics: { label: string; value: string }[];
   githubUrl?: string;
   liveUrl?: string;
-  visualType: 'presentplus' | 'loanlens' | 'placement' | 'agentic';
+  visualType: 'presentplus' | 'loanlens' | 'placement' | 'placeiq' | 'agentic';
 }
 
 export interface Experience {

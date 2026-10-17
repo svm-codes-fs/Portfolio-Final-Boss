@@ -12,16 +12,44 @@ export const PERSONAL_INFO = {
   status: 'AVAILABLE FOR INTERNSHIPS & ROLES',
   batch: '2028',
   academicInstitution: 'Thapar Institute of Engineering & Technology',
-  resumeUrl: 'https://drive.google.com/file/d/1i_ftdzSKTsIBeifO6ZhvsmAsl5wlhdf-/view?usp=drive_link',
-  resumeDownloadUrl: 'https://drive.google.com/uc?export=download&id=1i_ftdzSKTsIBeifO6ZhvsmAsl5wlhdf-',
+  resumeUrl: 'https://drive.google.com/file/d/17FkdiL9x_pb5hu2234tstvEQKvNukJUW/view?usp=drive_link',
+  resumeDownloadUrl: 'https://drive.google.com/uc?export=download&id=17FkdiL9x_pb5hu2234tstvEQKvNukJUW',
   statement: 'I LIKE TURNING MESSY PROBLEMS INTO SOFTWARE THAT ACTUALLY WORKS.',
   bio: "I'm Shivam Raj, a Computer Engineering undergraduate at Thapar Institute of Engineering and Technology (Batch of 2028). I specialize in building practical, high-performance software across Android, full-stack web applications, backend APIs, and explainable machine learning systems. Driven by strong fundamentals in Data Structures & Algorithms, Object-Oriented Design, and clean system architecture.",
 };
 
 export const PROJECTS: Project[] = [
   {
-    id: 'loanlens',
+    id: 'placeiq',
     number: '01',
+    title: 'PLACEIQ',
+    subtitle: 'AI-Powered Campus Placement Platform',
+    tagline: 'Multi-tenant recruitment platform with AI resume parsing, semantic job matching and mock interviews.',
+    description: 'Built a multi-tenant campus recruitment platform serving students, placement cells and platform admins on one deployment. Students upload a resume, get drives ranked by fit, see exactly why they can’t apply somewhere and practise AI mock interviews; placement cells run the pipeline, configure placement policies, bulk-import students and get ranked candidates per drive.',
+    category: 'AI & Full-Stack Systems',
+    year: '2026',
+    tags: ['React', 'Flask', 'PostgreSQL + pgvector', 'Celery', 'Redis', 'Docker', 'Claude API'],
+    role: 'Full-Stack & AI Engineer',
+    highlights: [
+      'Built a multi-tenant recruitment platform for students, placement cells and platform admins; isolated each college’s data with SQLAlchemy session hooks plus a PostgreSQL trigger, verified by tenant-isolation tests',
+      'Implemented AI resume parsing with the Claude API (validated structured outputs) and semantic job matching with local embeddings in pgvector, reaching 0.95 precision@5 on a labelled evaluation set',
+      'Designed async pipelines with Celery and Redis (resume parsing, interview scoring, bulk imports, scheduled offer expiry) with real-time Socket.IO notifications delivered from worker processes',
+      'Profiled with EXPLAIN ANALYZE: composite indexes made the busiest admin query 38× faster and pagination cut an endpoint from 1,081 ms to 26 ms; load-tested at 100 concurrent users, p95 250 ms, zero errors'
+    ],
+    architectureOverview: 'React + Vite SPA behind nginx → Flask API (JWT cookies, Socket.IO, per-college tenancy hooks) → PostgreSQL 16 + pgvector, with Celery workers on Redis calling the Claude API and local fastembed embeddings.',
+    metrics: [
+      { label: 'Match Precision@5', value: '0.95' },
+      { label: 'Query Speedup', value: '38×' },
+      { label: 'p95 @ 100 Users', value: '250ms' },
+      { label: 'Test Coverage', value: '89%' }
+    ],
+    githubUrl: 'https://github.com/svm-codes-fs/PlaceIQ',
+    liveUrl: 'https://github.com/svm-codes-fs/PlaceIQ',
+    visualType: 'placeiq'
+  },
+  {
+    id: 'loanlens',
+    number: '02',
     title: 'LOANLENS',
     subtitle: 'Explainable Loan Approval Prediction System',
     tagline: 'End-to-end ML pipeline with Explainable AI (XAI) for auditable credit risk assessment.',
@@ -47,7 +75,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'presentplus',
-    number: '02',
+    number: '03',
     title: 'PRESENT PLUS',
     subtitle: 'Student Attendance Tracker Android App',
     tagline: 'Offline-first Android attendance management system built to eliminate paper-based logs.',
@@ -75,7 +103,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'placement-management',
-    number: '03',
+    number: '04',
     title: 'PLACEMENT ENGINE',
     subtitle: 'Campus Recruitment & Candidate Tracking System',
     tagline: 'Role-based campus hiring platform streamlining student eligibility, drives, and interview funnels.',

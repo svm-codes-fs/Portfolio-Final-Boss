@@ -189,7 +189,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               // KEY ENGINEERING PROJECTS
             </h2>
             <div className="space-y-3">
-              {PROJECTS.slice(0, 2).map((proj) => (
+              {PROJECTS.slice(0, 3).map((proj) => (
                 <div key={proj.id} className="p-4 rounded-xl bg-[#141414] border border-[#222222] space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <h3 className="text-sm font-bold text-[#F5F5F0] uppercase font-headline">
